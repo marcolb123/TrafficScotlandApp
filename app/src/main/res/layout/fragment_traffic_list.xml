@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Mobile Platform Development Coursework 2026/27 -->
+<!-- Traffic Scotland Application -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F7FA"
+
+    tools:context=".MainActivity">
+
+    <!-- Application Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Traffic Scotland"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#163B65"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Download Traffic Data Button -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Traffic Information"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Status Message -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Press Start to load traffic incidents"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Road search input -->
+    <EditText
+        android:id="@+id/searchRoadInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search road (e.g. M8, A82)"
+        android:inputType="textCapCharacters"
+        android:singleLine="true"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Distance search heading -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Near Glasgow"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#163B65"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Distance input -->
+    <EditText
+        android:id="@+id/distanceInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter distance in km (e.g. 10)"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Distance search button -->
+    <Button
+        android:id="@+id/searchDistanceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find Nearby Traffic"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Search and reset buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/searchRoadButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Search" />
+
+        <Button
+            android:id="@+id/resetSearchButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Show All" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnShowMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Traffic Map" />
+
+    <!-- Traffic Incidents List -->
+    <ListView
+        android:id="@+id/trafficListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#CCCCCC"
+        android:dividerHeight="1dp"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:minHeight="88dp"
+    android:padding="12dp"
+    android:background="#FFFFFF">
+
+    <!-- Traffic situation icon -->
+    <ImageView
+        android:id="@+id/trafficIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_information"
+        android:contentDescription="Traffic situation icon" />
+
+    <!-- Text information -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/trafficType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Traffic Situation"
+            android:textColor="#163B65"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/trafficRoad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Road"
+            android:textColor="#475569"
+            android:textSize="13sp"
+            android:layout_marginTop="3dp" />
+
+        <TextView
+            android:id="@+id/trafficDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="#1E293B"
+            android:textSize="14sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_marginTop="5dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
