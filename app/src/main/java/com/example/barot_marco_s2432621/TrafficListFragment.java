@@ -191,8 +191,18 @@ public class TrafficListFragment extends Fragment {
     private int getSituationIcon(TrafficSituations situation) {
         String type = situation.getType() == null ? "" : situation.getType();
         String normalizedType = type.toLowerCase(Locale.ROOT);
-        if (normalizedType.contains("accident")) return R.drawable.ic_accident;
-        if ("ROADWORKS".equals(situation.getCategory())) return R.drawable.ic_roadworks;
+        
+        if (normalizedType.contains("accident")) {
+            return R.drawable.ic_accident;
+        } else if (normalizedType.contains("vehicle")) {
+            return R.drawable.ic_vehicle;
+        } else if (normalizedType.contains("lane") || normalizedType.contains("carriageway")) {
+            return R.drawable.ic_lane;
+        } else if (normalizedType.contains("obstruction")) {
+            return R.drawable.ic_obstruction;
+        } else if ("ROADWORKS".equals(situation.getCategory()) || normalizedType.contains("work")) {
+            return R.drawable.ic_roadworks;
+        }
         return R.drawable.ic_information;
     }
 
